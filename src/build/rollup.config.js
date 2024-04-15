@@ -43,9 +43,14 @@ const plugins = [
 
 module.exports = {
 	input: [
-		path.resolve( __dirname, `../js/${ bsSrcFile }` ),
-		path.resolve( __dirname, '../js/skip-link-focus-fix.js' ),
-		path.resolve( __dirname, '../js/custom-javascript.js' ),
+		//vendor
+		path.resolve( __dirname, `../js/vendor/${ bsSrcFile }` ),
+		path.resolve( __dirname, '../js/vendor/skip-link-focus-fix.js' ),
+		path.resolve( __dirname, '../js/vendor/jquery.matchHeight.js'),
+		//theme
+		path.resolve( __dirname, '../js/theme/scripts.js' ),
+		//blocks
+		path.resolve( __dirname, '../js/blocks/three-column.js' ),
 	],
 	output: [
 		{

@@ -1,0 +1,123 @@
+@import "../../assets/bootstrap5/functions";
+@import "../../assets/bootstrap5/variables";
+@import "../../assets/bootstrap5/variables-dark";
+@import "../../assets/bootstrap5/maps";
+@import "../../assets/bootstrap5/utilities";
+$radical-red: #ef4870;
+$koromiko: #ffc266;
+$malibu: #63c2e7;
+
+$custom-colors: (
+  "radical-red": $radical-red,
+  "koromiko": $koromiko,
+  "malibu": $malibu
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$radical-red-50: tint-color($radical-red, 90%);
+$radical-red-100: tint-color($radical-red, 80%);
+$radical-red-200: tint-color($radical-red, 60%);
+$radical-red-300: tint-color($radical-red, 40%);
+$radical-red-400: tint-color($radical-red, 20%);
+$radical-red-425: tint-color($radical-red, 15%);
+$radical-red-500: $radical-red;
+$radical-red-600: shade-color($radical-red, 20%);
+$radical-red-700: shade-color($radical-red, 40%);
+$radical-red-800: shade-color($radical-red, 60%);
+$radical-red-900: shade-color($radical-red, 80%);
+
+$koromiko-50: tint-color($koromiko, 90%);
+$koromiko-100: tint-color($koromiko, 80%);
+$koromiko-200: tint-color($koromiko, 60%);
+$koromiko-300: tint-color($koromiko, 40%);
+$koromiko-400: tint-color($koromiko, 20%);
+$koromiko-425: tint-color($koromiko, 15%);
+$koromiko-500: $koromiko;
+$koromiko-600: shade-color($koromiko, 20%);
+$koromiko-700: shade-color($koromiko, 40%);
+$koromiko-800: shade-color($koromiko, 60%);
+$koromiko-900: shade-color($koromiko, 80%);
+
+$malibu-50: tint-color($malibu, 90%);
+$malibu-100: tint-color($malibu, 80%);
+$malibu-200: tint-color($malibu, 60%);
+$malibu-300: tint-color($malibu, 40%);
+$malibu-400: tint-color($malibu, 20%);
+$malibu-425: tint-color($malibu, 15%);
+$malibu-500: $malibu;
+$malibu-600: shade-color($malibu, 20%);
+$malibu-700: shade-color($malibu, 40%);
+$malibu-800: shade-color($malibu, 60%);
+$malibu-900: shade-color($malibu, 80%);
+
+$radical-reds: (
+  "radical-red-50": $radical-red-50,
+  "radical-red-100": $radical-red-100,
+  "radical-red-200": $radical-red-200,
+  "radical-red-300": $radical-red-300,
+  "radical-red-400": $radical-red-400,
+  "radical-red-425": $radical-red-425,
+  "radical-red-500": $radical-red-500,
+  "radical-red-600": $radical-red-600,
+  "radical-red-700": $radical-red-700,
+  "radical-red-800": $radical-red-800,
+  "radical-red-900": $radical-red-900
+);
+
+$koromikos: (
+  "koromiko-50": $koromiko-50,
+  "koromiko-100": $koromiko-100,
+  "koromiko-200": $koromiko-200,
+  "koromiko-300": $koromiko-300,
+  "koromiko-400": $koromiko-400,
+  "koromiko-425": $koromiko-425,
+  "koromiko-500": $koromiko-500,
+  "koromiko-600": $koromiko-600,
+  "koromiko-700": $koromiko-700,
+  "koromiko-800": $koromiko-800,
+  "koromiko-900": $koromiko-900
+);
+
+$malibus: (
+  "malibu-50": $malibu-50,
+  "malibu-100": $malibu-100,
+  "malibu-200": $malibu-200,
+  "malibu-300": $malibu-300,
+  "malibu-400": $malibu-400,
+  "malibu-425": $malibu-425,
+  "malibu-500": $malibu-500,
+  "malibu-600": $malibu-600,
+  "malibu-700": $malibu-700,
+  "malibu-800": $malibu-800,
+  "malibu-900": $malibu-900
+);
+
+$all-colors: map-merge-multiple($radical-reds, $koromikos, $malibus);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);

@@ -15,9 +15,16 @@ async function copyDir(src, dest) {
     }
 }
 
+async function copyFile(src, dest) {
+    await fs.copyFile(src, dest);
+}
+
 // Copy all Bootstrap SCSS files.
 copyDir('./node_modules/bootstrap/scss', './src/sass/assets/bootstrap5');
-// Copy all Font Awesome SCSS files.
-copyDir('./node_modules/font-awesome/scss', './src/sass/assets/fontawesome');
+// Copy all Font Awesome SCSS files and fonts.
+copyDir('./node_modules/@fortawesome/fontawesome-free/scss', './src/sass/assets/fontawesome');
+copyDir('./node_modules/@fortawesome/fontawesome-free/webfonts', './fonts');
 // Copy all Understrap SCSS files.
 copyDir('./node_modules/understrap/src/sass/theme', './src/sass/assets/understrap/theme');
+// Copy jQuery Match Height
+copyFile('./node_modules/jquery-match-height/dist/jquery.matchHeight.js', './src/js/vendor/jquery.matchHeight.js');

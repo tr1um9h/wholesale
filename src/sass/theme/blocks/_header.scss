@@ -1,0 +1,9 @@
+.header {
+  border-top: rfs-value(60px) solid #f4f4f4;
+  @include padding(100px 0);
+  h1 {
+    span {
+      font-weight: $font-weight-black;
+    }
+  }
+}

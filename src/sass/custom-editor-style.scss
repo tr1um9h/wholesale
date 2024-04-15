@@ -21,14 +21,15 @@
 @import "assets/understrap/theme/blocks";
 
 
-
 // Fixes Gutenberg's cover block color picker.
+// stylelint-disable-next-line selector-class-pattern
 .components-circular-option-picker__option {
-	border-radius: 50%;
+  @include border-radius(50%);
 }
 
 // Matches the page title font weight.
+// stylelint-disable-next-line selector-class-pattern
 .editor-post-title .editor-post-title__input{
-	font-size: $h1-font-size;
-	font-weight: $headings-font-weight;
+  font-size: $h1-font-size;
+  font-weight: $headings-font-weight;
 }

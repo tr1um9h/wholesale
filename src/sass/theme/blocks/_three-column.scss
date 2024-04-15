@@ -1,0 +1,173 @@
+.three-column {
+  @include padding(80px 0);
+  .row > * {
+    padding-right: rfs-value(24px);
+    padding-left: rfs-value(24px);
+  }
+
+  .spotlight {
+    .title-holder {
+      display: flex;
+      align-items: center;
+      padding: rfs-value(10px);
+      background-color: $koromiko;
+
+      img {
+        margin-right: rfs-value(10px);
+      }
+
+      h3 {
+        margin-bottom: 0;
+        color: $white;
+      }
+    }
+
+    .content-holder {
+      padding: rfs-value(30px);
+      color: #818284;
+      background-image: url("../images/brick.jpg");
+      border-bottom: rfs-value(15px) solid $koromiko;
+      h3 {
+        margin-bottom: 0;
+        color: $koromiko;
+      }
+      ul {
+        //stylelint-disable-next-line selector-max-compound-selectors
+        li {
+          margin-bottom: $spacer * .5;
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    .title-holder {
+      display: flex;
+      align-items: center;
+      padding: rfs-value(10px);
+      background-color: $malibu;
+
+      img {
+        margin-right: rfs-value(10px);
+      }
+
+      h3 {
+        margin-bottom: 0;
+        color: $white;
+      }
+
+      .title {
+        margin-bottom: 0;
+        color: $white;
+      }
+    }
+    .content-holder {
+      padding: rfs-value(30px);
+      background-image: url("../images/brick.jpg");
+      border-bottom: rfs-value(15px) solid $malibu;
+      .testimonial-content {
+        font-family: "Gloria Hallelujah", cursive;
+        font-size: rfs-value(18px);
+        font-weight: 400;
+        line-height: 1.5em;
+        color: #818284;
+        text-align: center;
+        &::before {
+          position: relative;
+          display: block;
+          width: 52px;
+          height: 52px;
+          margin: 0 auto 30px;
+          content: "";
+          background-image: url("../images/heart-logo.svg");
+        }
+      }
+      .stars {
+        width: fit-content;
+        margin: 0 auto;
+        //stylelint-disable-next-line selector-max-compound-selectors
+        i {
+          margin-right: rfs-value(10px);
+          color: $malibu;
+          //stylelint-disable-next-line selector-max-compound-selectors
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .carousel-indicators {
+      z-index: 999;
+      display: block;
+      width: fit-content;
+      margin: -30px auto;
+      button {
+        width: 9px;
+        height: 9px;
+        margin-bottom: rfs-value(5px);
+        border: rfs-value(1px) solid $malibu;
+        @include border-radius($border-radius-pill);
+        //stylelint-disable-next-line selector-no-qualifying-type
+        &.active {
+          background-color: $malibu;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .signup {
+    .title-holder {
+      display: flex;
+      align-items: center;
+      padding: rfs-value(10px);
+      background-color: $radical-red;
+
+      img {
+        margin-right: rfs-value(10px);
+      }
+
+      h3 {
+        margin-bottom: 0;
+        color: $white;
+      }
+    }
+
+    .content-holder {
+      padding: rfs-value(30px);
+      background-image: url("../images/brick.jpg");
+      border-bottom: rfs-value(15px) solid $radical-red;
+      form {
+        position: relative;
+        //stylelint-disable-next-line selector-max-compound-selectors
+        p {
+          margin-bottom: $spacer * .5;
+        }
+        //stylelint-disable-next-line selector-max-compound-selectors
+        input {
+          @include border-radius(0);
+          //stylelint-disable-next-line selector-max-compound-selectors
+          &::placeholder {
+            font-size: rfs-value(11px);
+            color: #a7a9ac;
+          }
+        }
+        //stylelint-disable-next-line selector-max-compound-selectors
+        .wpcf7-spinner{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+        }
+        //stylelint-disable-next-line selector-max-compound-selectors
+        .wpcf7-submit {
+          width: fit-content;
+          color: $white;
+          @extend .btn;
+          @extend .btn-radical-red;
+        }
+      }
+    }
+  }
+}
