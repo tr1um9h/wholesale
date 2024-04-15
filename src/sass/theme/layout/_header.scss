@@ -2,4 +2,28 @@ header {
   nav {
     border-top: rfs-value(8px) solid $radical-red;
   }
+  .navbar-nav {
+    ul {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      //stylelint-disable-next-line selector-max-type
+      li {
+        display: inline-block;
+        margin-right: rfs-value(10px);
+        //stylelint-disable-next-line selector-max-type, selector-max-compound-selectors
+        a {
+          color: $white;
+        }
+      }
+    }
+    .phone {
+      font-size: rfs-value(13px);
+      line-height: 1.3em;
+      color: #818284;
+      span {
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
 }

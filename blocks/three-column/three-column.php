@@ -80,7 +80,7 @@
 			<?php } ?>
 			<?php if ($signup) { ?>
       <div class="col-md-4">
-        <div class="signup">
+        <div id="signup" class="signup">
           <div class="title-holder">
 						<?php echo wp_get_attachment_image($signup['icon'], 'full'); ?>
             <h3><?php echo $signup['card_title'] ?></h3>

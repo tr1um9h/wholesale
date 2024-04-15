@@ -24708,6 +24708,26 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 header nav {
   border-top: 0.5rem solid #ef4870;
 }
+header .navbar-nav ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+header .navbar-nav ul li {
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+header .navbar-nav ul li a {
+  color: #fff;
+}
+header .navbar-nav .phone {
+  font-size: 0.8125rem;
+  line-height: 1.3em;
+  color: #818284;
+}
+header .navbar-nav .phone span {
+  font-weight: 600;
+}
 
 footer {
   padding: calc(1.325rem + 0.9vw) 0;
