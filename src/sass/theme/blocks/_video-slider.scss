@@ -1,0 +1,65 @@
+.video-slider {
+  @include padding($spacer * 3 0 $spacer * 5);
+  .col-12 {
+    &::before {
+      position: relative;
+      display: block;
+      width: 52px;
+      height: 52px;
+      margin-bottom: $spacer * 2;
+      content: "";
+      background-image: url("../images/heart-logo-black.svg");
+      background-size: contain;
+    }
+  }
+  h1 {
+    font-weight: $font-weight-light;
+    @extend .display-4;
+    span {
+      font-weight: $font-weight-black;
+    }
+  }
+  p {
+    font-weight: $font-weight-medium;
+    color: #918f8f;
+  }
+  .video {
+    @include transition(width .3s ease-in-out);
+    button {
+      position: relative;
+      width: 100%;
+      background: none;
+      border: 0;
+      outline: 0;
+      appearance: none;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 50%;
+        height: 50%;
+        content: "";
+        background-image: url("../images/play-button.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%) translateX(-25%);
+        @include transition(width .3s ease-in-out, height .3s ease-in-out, top .3s ease-in-out, left .3s ease-in-out);
+      }
+      img {
+        width: 100%;
+      }
+      @include media-breakpoint-down(md) {
+        margin-bottom: $spacer * 1.5;
+      }
+    }
+    &.current {
+      button {
+        &::after {
+          width: 70%;
+          height: 70%;
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,22 @@
     </div>
     <div class="row">
       <div class="col-12">
-				<?php echo wp_get_attachment_image(get_field('image'), 'full'); ?>
+        <div id="testimonialsSlider" class="carousel slide" data-bs-ride="carousel">
+		      <?php if( have_rows('image_slider') ) {
+			      $count = 0; ?>
+            <div class="carousel-inner">
+				      <?php while( have_rows('image_slider') ) { the_row(); ?>
+                <div class="carousel-item<?php if (!$count) {
+						      echo ' active';
+					      } ?>">
+                  <?php echo wp_get_attachment_image(get_sub_field('image'), 'full'); ?>
+                </div>
+					      <?php
+					      $count++;
+				      } ?>
+            </div>
+		      <?php } ?>
+        </div>
       </div>
     </div>
   </div>

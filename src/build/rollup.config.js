@@ -50,7 +50,8 @@ module.exports = {
 		//theme
 		path.resolve( __dirname, '../js/theme/scripts.js' ),
 		//blocks
-		path.resolve( __dirname, '../js/blocks/three-column.js' ),
+		path.resolve( __dirname, '../js/theme/blocks/three-column.js' ),
+		path.resolve( __dirname, '../js/theme/blocks/video-slider.js' ),
 	],
 	output: [
 		{

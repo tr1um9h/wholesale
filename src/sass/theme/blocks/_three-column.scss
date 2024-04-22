@@ -38,6 +38,9 @@
         }
       }
     }
+    @include media-breakpoint-down(md) {
+      margin-bottom: $spacer * 1.5;
+    }
   }
 
   .testimonial {
@@ -62,7 +65,7 @@
       }
     }
     .content-holder {
-      padding: rfs-value(30px);
+      padding: $spacer * 1.875;
       background-image: url("../images/brick.jpg");
       border-bottom: rfs-value(15px) solid $malibu;
       .testimonial-content {
@@ -79,7 +82,7 @@
           height: 52px;
           margin: 0 auto 30px;
           content: "";
-          background-image: url("../images/heart-logo.svg");
+          background-image: url("../images/heart-logo-blue.svg");
         }
       }
       .stars {
@@ -87,7 +90,7 @@
         margin: 0 auto;
         //stylelint-disable-next-line selector-max-compound-selectors
         i {
-          margin-right: rfs-value(10px);
+          margin-right: $spacer * .625;
           color: $malibu;
           //stylelint-disable-next-line selector-max-compound-selectors
           &:last-child {
@@ -95,6 +98,7 @@
           }
         }
       }
+
     }
     .carousel-indicators {
       z-index: 999;
@@ -104,7 +108,7 @@
       button {
         width: 9px;
         height: 9px;
-        margin-bottom: rfs-value(5px);
+        margin-bottom: $spacer * .3125;
         border: rfs-value(1px) solid $malibu;
         @include border-radius($border-radius-pill);
         //stylelint-disable-next-line selector-no-qualifying-type
@@ -116,17 +120,20 @@
         }
       }
     }
+    @include media-breakpoint-down(md) {
+      margin-bottom: $spacer * 3;
+    }
   }
 
   .signup {
     .title-holder {
       display: flex;
       align-items: center;
-      padding: rfs-value(10px);
+      padding: $spacer * .625;
       background-color: $radical-red;
 
       img {
-        margin-right: rfs-value(10px);
+        margin-right: $spacer * .625;
       }
 
       h3 {
@@ -136,7 +143,7 @@
     }
 
     .content-holder {
-      padding: rfs-value(30px);
+      padding: $spacer * 1.875;
       background-image: url("../images/brick.jpg");
       border-bottom: rfs-value(15px) solid $radical-red;
       form {

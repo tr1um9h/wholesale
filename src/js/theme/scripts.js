@@ -4,6 +4,7 @@ const $ = jQuery;
 let wpadminbar = 0;
 $(document).ready(init);
 function init() {
+  $('.modal').appendTo('body');
   if ($('#wpadminbar').length) {
     adminSize();
   }
