@@ -15,10 +15,10 @@
 <section <?php if ($anchor) : ?>id="<?php echo $anchor ?>"<?php endif; ?> class="<?php echo $block_class; ?>">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-6 why-loan-simple">
         <img src="<?php echo get_stylesheet_directory_uri().'/images/why-loan-simple.svg'; ?>" alt="Why Loan Simple?" />
       </div>
-      <div class="col-12 col-md-7">
+      <div class="col-12 col-md-6">
         <div id="verticalSlider" class="vertical carousel slide" data-bs-ride="carousel">
 		      <?php if (have_rows('slide')) {
 			      $count = 0; ?>

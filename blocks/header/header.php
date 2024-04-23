@@ -16,11 +16,11 @@
 	<div class="container">
 		<div class="row justify-content-center">
       <div class="col-10">
-        <div class="row align-items-center">
-          <div class="col-2">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-2 col-md-3">
 	          <?php echo wp_get_attachment_image(get_field('image'), 'full'); ?>
           </div>
-          <div class="col-10">
+          <div class="col-8">
             <h1 class="display-3"><?php the_field('title'); ?></h1>
             <p><?php the_field('content'); ?></p>
           </div>

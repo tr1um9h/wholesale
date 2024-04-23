@@ -6,7 +6,7 @@
       display: block;
       width: 52px;
       height: 52px;
-      margin-bottom: $spacer * 2;
+      margin-bottom: $spacer * 1;
       content: "";
       background-image: url("../images/heart-logo-black.svg");
       background-size: contain;
@@ -20,8 +20,8 @@
     }
   }
   p {
+    @extend .fs-5;
     font-weight: $font-weight-medium;
-    color: #918f8f;
   }
   .video {
     @include transition(width .3s ease-in-out);
