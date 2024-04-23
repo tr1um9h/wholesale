@@ -6,6 +6,7 @@ header {
     ul {
       display: flex;
       align-items: center;
+      margin-right: $spacer;
       margin-bottom: 0;
       //stylelint-disable-next-line selector-max-type
       li {
@@ -13,6 +14,8 @@ header {
         margin-right: rfs-value(10px);
         //stylelint-disable-next-line selector-max-type, selector-max-compound-selectors
         a {
+          padding: $spacer * .125 $spacer;
+          font-size: $sub-sup-font-size;
           color: $white;
         }
       }

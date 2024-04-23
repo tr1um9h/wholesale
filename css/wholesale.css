@@ -25667,6 +25667,7 @@ header nav {
 header .navbar-nav ul {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
   margin-bottom: 0;
 }
 header .navbar-nav ul li {
@@ -25674,6 +25675,8 @@ header .navbar-nav ul li {
   margin-right: 0.625rem;
 }
 header .navbar-nav ul li a {
+  padding: 0.125rem 1rem;
+  font-size: 0.75em;
   color: #fff;
 }
 header .navbar-nav .phone {

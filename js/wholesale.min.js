@@ -1,5 +1,5 @@
 /*!
-  * Wholesale v1.0.0 (https://wholesale.loansimple.com)
+  * Wholesale v1.0.5 (https://wholesale.loansimple.com)
   * Copyright 2013-2024 Nikun Patel
   * Licensed under GPL-3.0 (undefined)
   */
