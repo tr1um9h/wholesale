@@ -25721,12 +25721,38 @@ footer .disclaimer a {
 .header img {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  .header img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 1rem;
+  }
+}
 .header h1 span, .header .h1 span {
   font-weight: 900;
 }
 
-.slider .why-loan-simple img {
-  width: 100%;
+.slider .why-loan-simple {
+  background-image: url("../images/why-loan-simple.svg");
+}
+@media (max-width: 767.98px) {
+  .slider .why-loan-simple {
+    margin-bottom: 1rem;
+  }
+}
+.slider .why-loan-simple h1, .slider .why-loan-simple .h1 {
+  padding: 2rem;
+  margin: 0;
+  color: #fff;
+  text-align: right;
+}
+@media (max-width: 767.98px) {
+  .slider .why-loan-simple h1, .slider .why-loan-simple .h1 {
+    text-align: center;
+  }
+}
+.slider .why-loan-simple h1 span, .slider .why-loan-simple .h1 span {
+  font-weight: 900;
 }
 .slider .vertical.carousel {
   display: flex;
@@ -25758,13 +25784,18 @@ footer .disclaimer a {
 .slider .vertical.carousel .carousel-indicators {
   position: unset;
   flex-direction: column;
-  margin: 0 0 0 -10px;
+  margin: 0;
   vertical-align: middle;
+}
+@media (max-width: 767.98px) {
+  .slider .vertical.carousel .carousel-indicators {
+    margin: 0 1rem 0 0;
+  }
 }
 .slider .vertical.carousel .carousel-indicators button {
   width: 9px;
   height: 9px;
-  margin-bottom: 0.3125rem;
+  margin-bottom: 0.625rem;
   border: 0.0625rem solid #ef4870;
   border-radius: 50rem;
 }

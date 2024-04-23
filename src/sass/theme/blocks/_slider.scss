@@ -1,7 +1,20 @@
 .slider {
   .why-loan-simple {
-    img {
-      width: 100%;
+    background-image: url("../images/why-loan-simple.svg");
+    @include media-breakpoint-down(md) {
+      margin-bottom: $spacer;
+    }
+    h1 {
+      padding: $spacer * 2;
+      margin: 0;
+      color: $white;
+      text-align: right;
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+      span {
+        font-weight: $font-weight-black;
+      }
     }
   }
   .vertical.carousel {
@@ -34,12 +47,15 @@
     .carousel-indicators {
       position: unset;
       flex-direction: column;
-      margin: 0 0 0 -10px;
+      margin: 0;
       vertical-align: middle;
+      @include media-breakpoint-down(md) {
+        margin: 0 $spacer 0 0;
+      }
       button {
         width: 9px;
         height: 9px;
-        margin-bottom: rfs-value(5px);
+        margin-bottom: $spacer * .625;
         border: rfs-value(1px) solid $radical-red;
         @include border-radius($border-radius-pill);
         //stylelint-disable-next-line selector-no-qualifying-type

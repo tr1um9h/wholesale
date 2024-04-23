@@ -3,6 +3,11 @@
   @include padding(100px 0);
   img {
     width: 100%;
+    @include media-breakpoint-down(md) {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto $spacer;
+    }
   }
   h1 {
     span {
