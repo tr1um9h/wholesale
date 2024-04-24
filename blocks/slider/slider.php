@@ -19,7 +19,7 @@
         <h1 class="display-5">Why <span>Loan Simple?</span></h1>
       </div>
       <div class="col-12 col-md-4">
-        <div id="verticalSlider" class="vertical carousel slide" data-bs-ride="carousel">
+        <div id="verticalSlider" class="vertical carousel">
 		      <?php if (have_rows('slide')) {
 			      $count = 0; ?>
             <div class="carousel-indicators">

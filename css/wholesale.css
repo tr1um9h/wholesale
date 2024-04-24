@@ -25767,6 +25767,7 @@ footer .disclaimer a {
 }
 .slider .vertical.carousel .carousel-item img {
   display: block;
+  width: 90%;
   margin: 0 auto;
 }
 .slider .vertical.carousel .carousel-item p {
@@ -25787,6 +25788,7 @@ footer .disclaimer a {
 .slider .vertical.carousel .carousel-indicators {
   position: unset;
   flex-direction: column;
+  padding: 0 0.5625rem 0 0.375rem;
   margin: 0;
   vertical-align: middle;
 }

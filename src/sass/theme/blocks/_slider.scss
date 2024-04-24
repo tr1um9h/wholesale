@@ -25,6 +25,7 @@
       overflow: hidden;
       img {
         display: block;
+        width: 90%;
         margin: 0 auto;
       }
       p {
@@ -47,6 +48,7 @@
     .carousel-indicators {
       position: unset;
       flex-direction: column;
+      padding: 0 $spacer * .5625 0 $spacer * .375;
       margin: 0;
       vertical-align: middle;
       @include media-breakpoint-down(md) {

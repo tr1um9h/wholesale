@@ -27,7 +27,7 @@
     <div class="navbar-nav ms-auto">
       <ul class="list-unstyled">
         <li>
-          <a class="btn btn-radical-red" href="#">Login</a>
+          <a class="btn btn-radical-red" href="https://tpo.loansimple.com/#/content/login" target="_blank">Login</a>
         </li>
         <li>
           <a class="btn btn-koromiko" href="#signup"> Sign Up</a>

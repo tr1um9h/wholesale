@@ -1,6 +1,6 @@
 {
   "name": "wholesale",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Wholesale theme based off Understrap Theme Framework: https://github.com/understrap/understrap",
   "main": "index.js",
   "scripts": {
