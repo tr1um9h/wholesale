@@ -1,5 +1,5 @@
 /*!
-  * Wholesale v1.0.7 (https://wholesale.loansimple.com)
+  * Wholesale v1.0.8 (https://wholesale.loansimple.com)
   * Copyright 2013-2024 Nikun Patel
   * Licensed under GPL-3.0 (undefined)
   */
@@ -7270,15 +7270,20 @@
 	}
 	function videoSliderClass() {
 	  $('.video-slider button').hover(function () {
-	    $('.video').removeClass('current col-md-6').addClass('col-md-2');
+	    $('.video-holder').removeClass('current col-md-6').addClass('col-md-2');
 	    $(this).parent().removeClass('col-md-2').addClass('current col-md-6');
 	  });
 	}
-	function youtubeVideoEvents(targetModal) {
+	function youtubeVideoEvents(targetModal, fullUrl) {
 	  let player;
+	  let onlyOnce = 0;
 	  const playerTarget = targetModal.slice(1);
 	  $(targetModal).on('shown.bs.modal', () => {
 	    body.removeClass(`stopped-video-${playerTarget}`);
+	    if (typeof player !== 'undefined' && player !== false) {
+	      player.playVideo();
+	      onlyOnce = 0;
+	    }
 	    function onYouTubeIframeAPIReady() {
 	      const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
 	      const match = $(`${targetModal} .youtube`).attr('data-src').match(regExp);
@@ -7289,9 +7294,27 @@
 	        width: '640',
 	        videoId: match[2],
 	        playerVars: {
-	          playsinline: 1
+	          playsinline: 1,
+	          origin: fullUrl
+	        },
+	        events: {
+	          onReady: onPlayerReady,
+	          onStateChange: onPlayerStateChange
 	        }
 	      });
+	      // eslint-disable-next-line no-console
+	      console.log('player', player);
+	    }
+	    function onPlayerReady(event) {
+	      event.target.playVideo();
+	      body.addClass(`playerReady-${playerTarget}`);
+	      const videoTitle = event.target.getVideoData().title;
+	      $(`${targetModal} .youtube iframe`).attr('title', videoTitle);
+	    }
+	    function onPlayerStateChange() {
+	      if (body.hasClass(`stopped-video-${playerTarget}`) && onlyOnce === 0) {
+	        onlyOnce++;
+	      }
 	    }
 	    if (!body.hasClass(`playerReady-${playerTarget}`)) {
 	      onYouTubeIframeAPIReady();

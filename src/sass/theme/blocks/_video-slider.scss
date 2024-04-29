@@ -23,7 +23,7 @@
     @extend .fs-5;
     font-weight: $font-weight-medium;
   }
-  .video {
+  .video-holder {
     @include transition(width .3s ease-in-out);
     button {
       position: relative;

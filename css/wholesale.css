@@ -25850,7 +25850,7 @@ footer .disclaimer a {
 }
 .three-column .spotlight .content-holder {
   padding: 1.875rem;
-  background-image: url("../images/brick.jpg");
+  background-image: url("../images/brick-new.jpg");
   border-bottom: 0.9375rem solid #ffc266;
 }
 .three-column .spotlight .content-holder h3, .three-column .spotlight .content-holder .h3 {
@@ -25884,7 +25884,7 @@ footer .disclaimer a {
 }
 .three-column .testimonial .content-holder {
   padding: 1.875rem;
-  background-image: url("../images/brick.jpg");
+  background-image: url("../images/brick-new.jpg");
   border-bottom: 0.9375rem solid #63c2e7;
 }
 .three-column .testimonial .content-holder .testimonial-content {
@@ -25955,7 +25955,7 @@ footer .disclaimer a {
 }
 .three-column .signup .content-holder {
   padding: 1.875rem;
-  background-image: url("../images/brick.jpg");
+  background-image: url("../images/brick-new.jpg");
   border-bottom: 0.9375rem solid #ef4870;
 }
 .three-column .signup .content-holder form {
@@ -26026,15 +26026,15 @@ footer .disclaimer a {
 .video-slider p {
   font-weight: 500;
 }
-.video-slider .video {
+.video-slider .video-holder {
   transition: width 0.3s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .video-slider .video {
+  .video-slider .video-holder {
     transition: none;
   }
 }
-.video-slider .video button {
+.video-slider .video-holder button {
   position: relative;
   width: 100%;
   background: none;
@@ -26044,7 +26044,7 @@ footer .disclaimer a {
   -moz-appearance: none;
   appearance: none;
 }
-.video-slider .video button::after {
+.video-slider .video-holder button::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26059,19 +26059,19 @@ footer .disclaimer a {
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .video-slider .video button::after {
+  .video-slider .video-holder button::after {
     transition: none;
   }
 }
-.video-slider .video button img {
+.video-slider .video-holder button img {
   width: 100%;
 }
 @media (max-width: 767.98px) {
-  .video-slider .video button {
+  .video-slider .video-holder button {
     margin-bottom: 1.5rem;
   }
 }
-.video-slider .video.current button::after {
+.video-slider .video-holder.current button::after {
   width: 70%;
   height: 70%;
 }

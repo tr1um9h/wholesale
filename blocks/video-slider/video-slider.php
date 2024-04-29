@@ -27,11 +27,11 @@
 					while (have_rows('videos')) : the_row(); ?>
 
             <div class="<?php if (!$count) {
-							echo 'video current col-md-6';
+							echo 'video-holder current col-md-6';
 						} else {
-							echo 'video col-md-2';
+							echo 'video-holder col-md-2';
 						} ?>">
-              <button data-bs-toggle="modal" data-bs-target="#video-<?php echo get_row_index() ?>-modal">
+              <button class="video" data-bs-toggle="modal" data-bs-target="#video-<?php echo get_row_index() ?>-modal">
 								<?php echo wp_get_attachment_image(get_sub_field('placeholder_image'), 'full'); ?>
               </button>
             </div>
