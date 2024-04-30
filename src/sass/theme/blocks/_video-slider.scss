@@ -58,6 +58,10 @@
         &::after {
           width: 70%;
           height: 70%;
+          @include media-breakpoint-down(md) {
+            width: 50%;
+            height: 50%;
+          }
         }
       }
     }

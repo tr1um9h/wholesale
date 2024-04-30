@@ -26075,5 +26075,11 @@ footer .disclaimer a {
   width: 70%;
   height: 70%;
 }
+@media (max-width: 767.98px) {
+  .video-slider .video-holder.current button::after {
+    width: 50%;
+    height: 50%;
+  }
+}
 
 /*# sourceMappingURL=wholesale.css.map */

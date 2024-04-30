@@ -40,10 +40,10 @@
 						      echo ' active';
 					      } ?>">
                   <div class="row align-items-center">
-                    <div class="col-2">
+                    <div class="col-3 col-sm-2">
 	                    <?php echo wp_get_attachment_image(get_sub_field('icon'), 'full'); ?>
                     </div>
-                    <div class="col-10">
+                    <div class="col-9 col-sm-10">
                       <p><span><?php the_sub_field('title') ?></span> <?php the_sub_field('content') ?></p>
                     </div>
                   </div>
