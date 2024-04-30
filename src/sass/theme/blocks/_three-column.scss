@@ -61,6 +61,9 @@
       .title {
         margin-bottom: 0;
         color: $white;
+        @include media-breakpoint-down(sm) {
+          font-size: rfs-value(14px);
+        }
       }
     }
     .content-holder {

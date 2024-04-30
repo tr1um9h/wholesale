@@ -25664,6 +25664,11 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 header nav {
   border-top: 0.5rem solid #ef4870;
 }
+@media (max-width: 575.98px) {
+  header .custom-text-logo {
+    margin-left: 1rem;
+  }
+}
 header .navbar-nav ul {
   display: flex;
   align-items: center;
@@ -25682,6 +25687,11 @@ header .navbar-nav ul li a {
 header .navbar-nav .phone {
   font-size: 0.8125rem;
   line-height: 1.3em;
+}
+@media (max-width: 575.98px) {
+  header .navbar-nav .phone {
+    margin-top: 0.5rem;
+  }
 }
 header .navbar-nav .phone span {
   font-weight: 600;
@@ -25707,6 +25717,7 @@ footer::before {
 }
 footer .disclaimer {
   font-size: 0.75em;
+  text-align: center;
 }
 footer .disclaimer a {
   color: #000;
@@ -25881,6 +25892,11 @@ footer .disclaimer a {
 .three-column .testimonial .title-holder .title {
   margin-bottom: 0;
   color: #fff;
+}
+@media (max-width: 575.98px) {
+  .three-column .testimonial .title-holder .title {
+    font-size: 0.875rem;
+  }
 }
 .three-column .testimonial .content-holder {
   padding: 1.875rem;

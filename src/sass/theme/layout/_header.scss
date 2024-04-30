@@ -2,6 +2,11 @@ header {
   nav {
     border-top: rfs-value(8px) solid $radical-red;
   }
+  .custom-text-logo {
+    @include media-breakpoint-down(sm) {
+      margin-left: $spacer;
+    }
+  }
   .navbar-nav {
     ul {
       display: flex;
@@ -23,6 +28,9 @@ header {
     .phone {
       font-size: rfs-value(13px);
       line-height: 1.3em;
+      @include media-breakpoint-down(sm) {
+        margin-top: $spacer * .5;
+      }
       span {
         font-weight: $font-weight-semibold;
       }

@@ -19,7 +19,7 @@
   <div class="wrapper" id="wrapper-footer">
     <div class="<?php echo esc_attr($container); ?>">
       <p class="disclaimer">
-	      <?php understrap_site_info(); ?>
+        &copy;<script>document.write(new Date().getFullYear());</script> <?php understrap_site_info(); ?>
       </p>
     </div>
   </div><!-- #wrapper-footer -->
