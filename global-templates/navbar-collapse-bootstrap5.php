@@ -36,10 +36,12 @@
       <div class="phone">
         <span>Contact Us</span><br>
         <span>E:</span> mdozois@loansimple.com<br>
-        <span>P:</span> 855-735-4875
+        <span>P:</span> 1-855-735-4875
       </div>
     </div>
 
   </div><!-- .container(-fluid) -->
 
 </nav><!-- #main-nav -->
+
+
