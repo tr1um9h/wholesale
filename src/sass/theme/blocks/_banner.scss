@@ -1,0 +1,14 @@
+.banner {
+  .banner-holder {
+    padding: $spacer * .625;
+    font-size: rfs-value(22px);
+    font-weight: $font-weight-semibold;
+    color: $black;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

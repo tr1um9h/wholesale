@@ -1,0 +1,39 @@
+header {
+  nav {
+    border-top: rfs-value(8px) solid $radical-red;
+  }
+  .custom-text-logo {
+    @include media-breakpoint-down(sm) {
+      margin-left: $spacer;
+    }
+  }
+  .navbar-nav {
+    ul {
+      display: flex;
+      align-items: center;
+      margin-right: $spacer;
+      margin-bottom: 0;
+      //stylelint-disable-next-line selector-max-type
+      li {
+        display: inline-block;
+        margin-right: rfs-value(10px);
+        //stylelint-disable-next-line selector-max-type, selector-max-compound-selectors
+        a {
+          padding: $spacer * .125 $spacer;
+          font-size: $sub-sup-font-size;
+          color: $white;
+        }
+      }
+    }
+    .phone {
+      font-size: rfs-value(13px);
+      line-height: 1.3em;
+      @include media-breakpoint-down(sm) {
+        margin-top: $spacer * .5;
+      }
+      span {
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}
